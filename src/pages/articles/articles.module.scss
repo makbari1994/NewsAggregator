@@ -1,0 +1,31 @@
+.articles {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 30px auto;
+
+    @media (max-width:990px) {
+        width: 90%;
+    }
+
+    .loader {
+        margin: 20px auto;
+
+    }
+}
+
+.articleItems {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 5%;
+    row-gap: 20px;
+    margin: 30px auto;
+
+    @media (max-width:990px) {
+        gap: 4%;
+        row-gap: 20px;
+    }
+}

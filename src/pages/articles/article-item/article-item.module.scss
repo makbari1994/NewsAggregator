@@ -1,0 +1,39 @@
+.articleItem {
+    width: 30%;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid rgb(219, 215, 215);
+    border-radius: 5px;
+    padding: 10px;
+
+    @media (max-width:990px) {
+        width: 48%;
+    }
+
+    @media (max-width:540px) {
+        width: 100%;
+    }
+
+    .image {
+        img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+
+            @media (max-width:990px) {
+                height: 200px;
+            }
+        }
+    }
+
+    .title {
+        text-align: left;
+    }
+
+    .date {
+        color: #797777;
+        font-size: 12px;
+    }
+}

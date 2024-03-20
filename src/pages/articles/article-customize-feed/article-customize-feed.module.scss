@@ -1,0 +1,53 @@
+.articleCustomizeFeed {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-bottom: 1px solid #797979;
+    padding-bottom: 20px;
+    margin-top: 20px;
+
+    .title {
+        font-weight: 600;
+    }
+
+    .filterItems {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+
+        @media (max-width:990px) {
+            flex-wrap: wrap;
+        }
+
+        .filterItem {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+
+            @media (max-width:990px) {
+                width: 48%;
+            }
+
+            .filterTitle {
+                font-weight: 400;
+                height: 20px;
+            }
+
+            input {
+                width: 100%;
+            }
+
+            button {
+                cursor: pointer;
+            }
+
+
+        }
+    }
+
+
+}
