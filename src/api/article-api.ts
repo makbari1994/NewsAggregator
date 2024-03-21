@@ -18,9 +18,9 @@ import { IGuardianRequest } from "../models/guardian-request-model";
 const getNewsApiArticles = async (
   params: IArticleRequest
 ): Promise<INewsApiResponseModel> => {
-  const url = "https://newsapi.org/v2/everything";
+  const url = String(process.env.REACT_APP_NEWS_API_URL);
   const newsApiParams = {} as INewsApiRequestModel;
-  newsApiParams.apiKey = "6aa523be434241e4b2f4a481cf1e1376";
+  newsApiParams.apiKey = String(process.env.REACT_APP_NEWS_API_API_KEY);
   newsApiParams.sources = params.source;
   newsApiParams.q = params.query;
   newsApiParams.from = params.fromDate;
@@ -41,9 +41,9 @@ const getNewsApiArticles = async (
 const getGuardianArticles = async (
   params: IArticleRequest
 ): Promise<IGuardianResponse> => {
-  const url = "https://content.guardianapis.com/search";
+  const url = String(process.env.REACT_APP_GUARDIAN_URL);
   const gurdianParams = {} as IGuardianRequest;
-  gurdianParams["api-key"] = "764cb760-193b-447c-b15a-031dcd7daf9b";
+  gurdianParams["api-key"] = String(process.env.REACT_APP_GUARDIAN_API_KEY);
   gurdianParams["reference-type"] = params.source;
   gurdianParams["q"] = params.query;
   gurdianParams["from-date"] = params.fromDate;
@@ -67,9 +67,9 @@ const getGuardianArticles = async (
 const getNytimesArticles = async (
   params: IArticleRequest
 ): Promise<INytimesResponse> => {
-  const url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+  const url = String(process.env.REACT_APP_NYTIMES_URL);
   const nyTimesParams = {} as INytimesRequest;
-  nyTimesParams["api-key"] = "aSGlxJi2QtCGKenVBGKsC9W9usJyGYXg";
+  nyTimesParams["api-key"] = String(process.env.REACT_APP_NYTIMES_API_KEY);
   if (params.source) {
     nyTimesParams.fq = `source:(${params.source})`;
   }
